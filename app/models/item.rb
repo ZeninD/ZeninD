@@ -1,3 +1,3 @@
 class Item < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :price, :name, :real, :weight, :description
 end
