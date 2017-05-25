@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.create(params[:item])
     if @item.errors.empty?
-      redirect_to item_path(@item)
+      redirect_to item_path(@item) #render "show" wrong
     else
       render "new"
     end
