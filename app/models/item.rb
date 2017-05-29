@@ -5,6 +5,8 @@ class Item < ActiveRecord::Base
   validates :name, length: { minimum: 2 }, presence: true
   validates :name, :description, presence: true
 
+  has_and_belongs_to_many :carts
+
   belongs_to :category
 
   after_initialize { puts "initialized" }  # Item.new; Item.first
