@@ -8,5 +8,7 @@ MyStore::Application.routes.draw do
   end
   # match ':controller(/:action(/:id))(.:format)'
 
+  match "admin/users_count" => "admin#users_count"
+
   root to: "items#index"
 end

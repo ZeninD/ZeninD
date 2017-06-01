@@ -11,3 +11,4 @@
  *= require_self
  *= require_tree .
  */
+.adminPanel { width: 90%; margin-bottom: 1em; background-color: blue; padding: 1em; color: #fff;}
