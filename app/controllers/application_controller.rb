@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery
+  before_filter :authenticate_user!
 
   private
 
@@ -12,8 +13,8 @@ class ApplicationController < ActionController::Base
       render file: "public/404.html", status: 404
     end
 
-    def check_if_admin
-      render_403 unless params[:admin]
-    end
+    # def check_if_admin
+      # render_403 unless params[:admin]
+    # end
 
 end

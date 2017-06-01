@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
-  # Include default device modules. Other available are:
+  # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniautable
-  # devise :database_authenticatable, :registerable,
-  # :recoverable, :rememberable, :validatable
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :login, :email, :password, :password_confirmation, :remember_me
 
