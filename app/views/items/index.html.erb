@@ -9,6 +9,7 @@
             <th>Item id</th>
             <th>Name</th>
             <th>Price</th>
+            <th>Created_at</th>
             <th></th>
             <th></th>
         </tr>
@@ -19,6 +20,7 @@
             <td><%= i.id %></td>
             <td><%= link_to i.name, item_path(i) %></td>
             <td><%= i.price %> rubbles.</td>
+            <td><%= i.created_at %></td>
             <td><%= button_to "Delete", item_path(i), method: :delete, data: { confirm: "Are you sure?" } %></td>
             <td>Rating: <%= i.voutes_count %>, <%= link_to "+", upvote_item_path(i) %></td>
         </tr>
