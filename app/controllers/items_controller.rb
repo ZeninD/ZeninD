@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_filter :check_if_admin, only: [:edit, :update, :new, :destroy, :create]
 
   def index
-    @items = Item.where("price >= ?", params[:price_from])
+    @items = Item.where("price >= ?", params[:price_from]).order("voutes_count DESC", "price").limit(50)
   end
 
   def expensive
