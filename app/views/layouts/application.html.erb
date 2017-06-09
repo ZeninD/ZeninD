@@ -14,6 +14,8 @@ You've signed in as <%= current_user.email %>
   <%= button_to "Log out", destroy_user_session_path, method: :delete %>
 <% end %>
 
+<p style="color: red;"><%= flash[:error] %></p>
+<p style="color: green;"><%= flash[:success] %></p>
 <%= yield %>
 
 </body>

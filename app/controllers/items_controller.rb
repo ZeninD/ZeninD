@@ -46,8 +46,10 @@ class ItemsController < ApplicationController
   def update
     @item.update_attributes(params[:item])
     if @item.errors.empty?
+      flash[:succsess] = "Item successfully updated!"
       redirect_to item_path(@item)
     else
+      flash.now[:error] = "You made mistakes in your form! Please correct them."
       render "edit"
     end
   end
