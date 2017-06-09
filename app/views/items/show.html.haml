@@ -1,0 +1,8 @@
+%h1= @item.name
+
+%ul
+  %li Price: #{@item.price} rubbles.
+  %li= urls_to_links(urls_to_images(@item.description))
+  %li Weight: #{@item.weight} kilos.
+
+= render partial: "shared/email"
