@@ -39,6 +39,8 @@ gem 'bootstrap-sass'
 # gem 'sass-rails'
 gem 'sprockets-rails', '3.0.4'
 
+gem 'simple_form'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
