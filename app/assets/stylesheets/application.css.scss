@@ -11,4 +11,8 @@
  *= require_self
  *= require_tree .
  */
+@import "bootstrap";
+
+input[type=submit] { @extend .btn; @extend .btn-success; }
+
 .adminPanel { width: 90%; margin-bottom: 1em; background-color: blue; padding: 1em; color: #fff;}
