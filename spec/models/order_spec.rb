@@ -12,7 +12,7 @@ describe Order do
     order.items << item2
 
     order.calculate_total
-    order.total.should == 30
+    expect(order.total).to eq(30)
 
   end
 
