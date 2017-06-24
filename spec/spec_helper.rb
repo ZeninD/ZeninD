@@ -22,9 +22,7 @@ RSpec.configure do |config|
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
 
-  config.expect_with(:rspec) { |c| c.syntax = :should }
-
-  config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.include Devise::TestHelpers, :type => :controller
 
   config.expect_with :rspec do |expectations|
 
